@@ -9,7 +9,7 @@ public class ATMInterface {
         BankDatabase.addUser(new User("1001", "1234", 5000));
         BankDatabase.addUser(new User("1002", "5678", 10000));
 
-        System.out.println("\uD83D\uDD11 Welcome to Secure ATM");  // Lock emoji
+        System.out.println(" Welcome to Secure ATM");  // Lock emoji
 
         // login
         System.out.print("Enter Account Number: ");
@@ -18,25 +18,25 @@ public class ATMInterface {
         String pin = sc.next();
 
         if (atm.login(accNo, pin)) {
-            System.out.println("\u2705 Login successful!");  
+            System.out.println(" Login successful!");  
 
             // otp validation
             String generatedOTP = OTPService.generateOTP();
-            System.out.println("\uD83D\uDCF1 Your OTP is: " + generatedOTP);  
+            System.out.println(" Your OTP is: " + generatedOTP);  
             System.out.print("Enter OTP to continue: ");
             String enteredOTP = sc.next();
 
             if (atm.verifyOTP(generatedOTP, enteredOTP)) {
-                System.out.println("\u2705 OTP verified. Access granted.");
+                System.out.println(" OTP verified. Access granted.");
                 
                 while (true) {
                     System.out.println("===== ATM Menu =====\n");
-                    System.out.println(" 1️⃣  Deposit");
-                    System.out.println(" 2️⃣  Withdraw");
-                    System.out.println(" 3️⃣  Balance Enquiry");
-                    System.out.println(" 4️⃣  Mini Statement");
-                    System.out.println(" 5️⃣  Change PIN");
-                    System.out.println(" 6️⃣  Exit");
+                    System.out.println(" 1#  Deposit");
+                    System.out.println(" 2#  Withdraw");
+                    System.out.println(" 3#  Balance Enquiry");
+                    System.out.println(" 4# Mini Statement");
+                    System.out.println(" 5#  Change PIN");
+                    System.out.println(" 6#  Exit");
                     System.out.print("Choose an option: ");
 
                     int choice = sc.nextInt();
@@ -78,11 +78,11 @@ public class ATMInterface {
                 }
 
             } else {
-                System.out.println("\u274C Incorrect OTP. Exiting.");  
+                System.out.println(" Incorrect OTP. Exiting.");  
             }
 
         } else {
-            System.out.println("\u274C Invalid credentials. Access denied.");  
+            System.out.println(" Invalid credentials. Access denied.");  
         }
 
         sc.close();
