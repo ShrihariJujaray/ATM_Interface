@@ -18,23 +18,23 @@ public class ATM {
 
     public void deposit(double amount) {
         currentUser.deposit(amount);
-        System.out.println("✅ ₹" + amount + " deposited successfully.");
+        System.out.println(" ₹" + amount + " deposited successfully.");
     }
 
     public void withdraw(double amount) {
         if (currentUser.withdraw(amount)) {
-            System.out.println("✅ ₹" + amount + " withdrawn successfully.");
+            System.out.println(" ₹" + amount + " withdrawn successfully.");
         } else {
-            System.out.println("❌ Insufficient balance.");
+            System.out.println(" Insufficient balance.");
         }
     }
 
     public void showBalance() {
-        System.out.println("💰 Current Balance: ₹" + currentUser.getBalance());
+        System.out.println(" Current Balance: ₹" + currentUser.getBalance());
     }
 
     public void showMiniStatement() {
-        System.out.println("📄 Mini Statement:");
+        System.out.println(" Mini Statement:");
         for (String entry : currentUser.getMiniStatement()) {
             System.out.println("• " + entry);
         }
@@ -42,6 +42,6 @@ public class ATM {
 
     public void changePin(String newPin) {
         currentUser.setPin(newPin);
-        System.out.println("✅ PIN changed successfully.");
+        System.out.println(" PIN changed successfully.");
     }
 }

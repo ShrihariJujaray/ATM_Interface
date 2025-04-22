@@ -70,10 +70,10 @@ public class ATMInterface {
                             }
                             break;
                         case 6:
-                            System.out.println("\uD83D\uDC4B Thank you for using Secure ATM!");  
+                            System.out.println(" Thank you for using Secure ATM!");  
                             System.exit(0);
                         default:
-                            System.out.println("\u274C Invalid choice. Please try again.");  
+                            System.out.println(" Invalid choice. Please try again.");  
                     }
                 }
 
