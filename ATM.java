@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ATM {
     private User currentUser;
 
@@ -35,9 +37,17 @@ public class ATM {
 
     public void showMiniStatement() {
         System.out.println(" Mini Statement:");
-        for (String entry : currentUser.getMiniStatement()) {
-            System.out.println("• " + entry);
+        ArrayList<String> stmt = currentUser.getMiniStatement();
+
+        if (stmt.isEmpty()) {
+            System.out.println("Make some transactions dude");
         }
+        else 
+            for (String entry : stmt) {
+                System.out.println("• " + entry);
+            }
+        System.out.println("Available Balance " + currentUser.getBalance());
+
     }
 
     public void changePin(String newPin) {

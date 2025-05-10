@@ -8,7 +8,10 @@ public class ATMInterface {
         // users
         BankDatabase.addUser(new User("1001", "1234", 5000));
         BankDatabase.addUser(new User("1002", "5678", 10000));
-
+        BankDatabase.addUser(new User("1003", "4321", 7500));
+        BankDatabase.addUser(new User("1004", "8765", 2000));
+        BankDatabase.addUser(new User("1005", "0000", 15000));
+        
         System.out.println(" Welcome to Secure ATM");  // Lock emoji
 
         // login
